@@ -18,5 +18,14 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "rules": {}
+  "rules": {
+    "no-implicit-coercion": "off",
+    "no-unused-vars": "error",
+    "new-cap": [
+      "error",
+      {
+        "capIsNewExceptions": ["Router"]
+      }
+    ]
+  }
 }
