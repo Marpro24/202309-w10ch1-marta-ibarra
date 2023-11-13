@@ -1,11 +1,11 @@
-import express from "express";
 import morgan from "morgan";
-
-const app = express();
-const port = process.env.PORT ?? 4000;
-
-app.listen(port, () => {
-  console.log(`listening`);
-});
+import "dotenv/config";
+import { notFound } from "./features/middleware/error/errorMiddleware.js";
+import thingsRouter from "./features/things/router/thingsRouter.js";
+import app from "./app.js";
 
 app.use(morgan("dev"));
+
+app.use("/things", thingsRouter);
+
+app.use(notFound);
