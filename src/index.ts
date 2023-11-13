@@ -1,3 +1,3 @@
-import morgan from "morgan";
+import express from "express";
 
-app.use(morgan("dev"));
+const app = express();
