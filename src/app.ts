@@ -6,7 +6,7 @@ const port = process.env.PORT ?? 4000;
 
 app.listen(+port, () => {
   console.log(
-    chalk.bgBlackBright(
+    chalk.bgMagentaBright(
       `listening in port ${chalk.bgCyanBright(`http://localhost:${port}`)}`,
     ),
   );
